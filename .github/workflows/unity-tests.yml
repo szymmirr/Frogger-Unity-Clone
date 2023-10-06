@@ -12,7 +12,7 @@ jobs:
       - name: Run Unity tests
         uses: game-ci/unity-test-runner@v3
         env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE2 }}
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload results
