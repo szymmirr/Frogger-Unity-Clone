@@ -19,8 +19,6 @@ jobs:
           - iOS
           - StandaloneOSX
           - StandaloneLinux64
-        unityVersion:
-          - 2019.4.5f1
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,7 +31,6 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
-          unityVersion: ${{ matrix.unityVersion }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
