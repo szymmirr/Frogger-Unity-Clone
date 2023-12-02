@@ -15,7 +15,6 @@ jobs:
         targetPlatform:
           - StandaloneWindows64
           - WebGL
-          - Android
           - iOS
           - StandaloneOSX
           - StandaloneLinux64
@@ -44,6 +43,7 @@ jobs:
     strategy:
       matrix:
         targetPlatform:
+          - Android
           - WSAPlayer
           - tvOS
     steps:
