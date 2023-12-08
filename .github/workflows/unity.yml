@@ -15,6 +15,7 @@ jobs:
         targetPlatform:
           - StandaloneWindows64
           - WebGL
+          - Android
           - iOS
           - StandaloneOSX
           - StandaloneLinux64
@@ -23,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Unity Builder
-        uses: game-ci/unity-builder@v4.1.1
+        uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
@@ -43,7 +44,6 @@ jobs:
     strategy:
       matrix:
         targetPlatform:
-          - Android
           - WSAPlayer
           - tvOS
     steps:
@@ -51,7 +51,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Unity Builder
-        uses: game-ci/unity-builder@v4.1.1
+        uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
