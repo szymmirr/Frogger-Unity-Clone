@@ -33,7 +33,7 @@ jobs:
           targetPlatform: ${{ matrix.targetPlatform }}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Frog-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
@@ -60,7 +60,7 @@ jobs:
           targetPlatform: ${{ matrix.targetPlatform }}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Frog-${{ matrix.targetPlatform }}
           path: build/${{ matrix.targetPlatform }}
