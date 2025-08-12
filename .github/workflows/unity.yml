@@ -21,7 +21,7 @@ jobs:
           - StandaloneLinux64
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Unity Builder
         uses: game-ci/unity-builder@v4
@@ -48,7 +48,7 @@ jobs:
           - tvOS
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Unity Builder
         uses: game-ci/unity-builder@v4
